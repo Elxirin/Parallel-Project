@@ -1,0 +1,48 @@
+<div class="card" id="crd">
+    <div class="card-body">
+      <div class="container" id="crd">
+        <br>
+        <h2>Update Employee</h2>
+        <br>
+        <form #formUpdate='ngForm' (ngSubmit)="onSubmit(formUpdate.value)">
+          <div class="from-group row">
+            <label class="col-sm-2 col-form-label">Employee Code</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="code" placeholder="Enter your Employee code" [(ngModel)]='code' >
+            </div>
+          </div>
+          <br>
+          <div class="from-group row">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="name" placeholder="Enter your Name" [(ngModel)]='name'>
+            </div>
+          </div>
+          <br>
+          <div class="from-group row">
+            <label class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="gender" placeholder="Enter Gender" [(ngModel)]='gender'>
+            </div>
+          </div>
+          <br>
+          <div class="from-group row">
+            <label class="col-sm-2 col-form-label">Annual Salary</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="annualSalary" placeholder="Enter annual salary" [(ngModel)]='annualSalary'>
+            </div>
+          </div>
+          <br>
+          <div class="from-group row">
+            <label class="col-sm-2 col-form-label">Date of Birth</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="dateOfBirth" placeholder="Enter Date of birth" [(ngModel)]='dateOfBirth'>
+            </div>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary col-sm-2">Save</button>
+          <button type="reset" class="btn btn-primary col-sm-2" style="margin-left: 20px">Reset</button>
+        </form>
+      </div>
+    </div>
+  </div>

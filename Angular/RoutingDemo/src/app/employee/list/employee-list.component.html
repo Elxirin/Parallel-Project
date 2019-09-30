@@ -1,0 +1,25 @@
+<div class="card" id="crd" >
+  <div class="card-body">
+    <div class="conatiner">
+      <table class="table table-striped" >
+        <tr>
+          <th>Employee Code</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Annual Salary</th>
+          <th>Date of Birth</th>
+          <th colspan="2" class="text-center">Action</th>
+        </tr>
+        <tr *ngFor='let employee of employees'>
+          <td> <a [routerLink]="['/employees',employee.code]"> {{employee.code}} </a> </td>
+          <td> {{employee.name}} </td>
+          <td> {{employee.gender}} </td>
+          <td> {{employee.annualSalary}} </td>
+          <td> {{employee.dateOfBirth}} </td>
+          <td> <button class="btn btn-secondary" (click)='updateEmployee(employee.code)'>Update</button></td>
+          <td> <button class="btn btn-danger" (click)='deleteEmployee(employee.code)'>Delete</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

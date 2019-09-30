@@ -1,0 +1,37 @@
+<div class="card" id="crd">
+  <div class="card-body">
+    <div class="container">
+      <h1>Details of {{employee.name}}</h1>
+      <table class="table table-striped">
+        <tr>
+          <td>Employee Code</td>
+          <td> {{employee.code}} </td>
+        </tr>
+
+        <tr>
+          <td>Name</td>
+          <td> {{employee.name}} </td>
+        </tr>
+
+        <tr>
+          <td>Gender</td>
+          <td> {{employee.gender}} </td>
+        </tr>
+
+        <tr>
+          <td>Annual Salary</td>
+          <td> {{employee.annualSalary}} </td>
+        </tr>
+
+        <tr>
+          <td>Date of Birth</td>
+          <td> {{employee.dateOfBirth}} </td>
+        </tr>
+
+      </table>
+
+      <button class="btn btn-warning" (click)='navigate("back")'>Go Back</button>
+      <button class="btn btn-warning" (click)='navigate("home")' style="margin-left: 30px">Go to Home</button>
+    </div>
+  </div>
+</div>

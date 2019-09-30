@@ -1,0 +1,55 @@
+<div class="card" id="crd">
+  <div class="card-body">
+    <div class="container" id="crd">
+      <br>
+      <h2>Add Employee</h2>
+      <br>
+      <form #userForm='ngForm' (ngSubmit)="onSubmit(userForm)">
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Employee Code</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="code" #code='ngModel'  [ngClass]="{ 's-invalid': userForm.submitted && code.invalid }" placeholder="Enter your Employee code" required ngModel>
+          </div>
+          <small *ngIf="userForm.submitted && code.invalid" class="alert alert-danger col-sm-4" >
+            <div [hidden]='!code.errors.required'  >*Please Enter Code</div>
+         </small>
+        </div>
+        <br>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" #name='ngModel' [ngClass]="{ 's-invalid': userForm.submitted && name.invalid }" name="name" placeholder="Enter your Name" minlength="3" required  ngModel>
+          </div>
+          <small *ngIf="userForm.submitted && name.invalid" class="alert alert-danger col-sm-4" >
+            <div [hidden]='!name.errors.required'  >*Please Enter Name</div>
+            <div [hidden]='!name.errors.minlength'  >*Name should be atleast 3 chars</div>
+         </small>
+        </div>
+        <br>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Gender</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="gender" placeholder="Enter Gender" ngModel>
+          </div>
+        </div>
+        <br>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Annual Salary</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="annualSalary" placeholder="Enter annual salary" ngModel>
+          </div>
+        </div>
+        <br>
+        <div class="from-group row">
+          <label class="col-sm-2 col-form-label">Date of Birth</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" name="dateOfBirth" placeholder="Enter Date of birth" ngModel>
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary col-sm-2">Add</button>
+        <button type="reset" class="btn btn-primary col-sm-2" style="margin-left: 20px">Reset</button>
+      </form>
+    </div>
+  </div>
+</div>

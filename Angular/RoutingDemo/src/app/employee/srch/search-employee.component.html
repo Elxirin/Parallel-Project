@@ -1,0 +1,36 @@
+<div class="card" style="margin-top: 30px">
+  <div class="card-body">
+
+    <form #userForm="ngForm" (ngSubmit)="search(userForm.value)">
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Search Here</label>
+        <input type="text" class="form-control col-sm-6" name="searchTerm" ngModel>
+        <button type="submit" class="btn btn-info btn-sm col-sm-2" style="margin-left: 5px; ">Search</button>
+      </div>
+     
+    </form>
+    
+
+  </div>
+</div>
+
+<div class="card" style="margin-top: 10px">
+  <div class="card-body">
+    <table class="table table-striped">
+      <tr>
+        <th>Employee Code</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Annual Salary</th>
+        <th>Date of Birth</th>
+      </tr>
+      <tr *ngFor='let emp of employees'>
+        <td> {{emp.code}} </td>
+        <td> {{emp.name}} </td>
+        <td> {{emp.gender}} </td>
+        <td> {{emp.annualSalary}} </td>
+        <td> {{emp.dateOfBirth}} </td>
+      </tr>
+    </table>
+  </div>
+</div>

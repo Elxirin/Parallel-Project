@@ -1,0 +1,20 @@
+<div class="card" id="crd" >
+    <div class="card-body">
+      <div class="conatiner">
+        <table class="table table-striped" >
+          <tr>
+            <th>Account Id</th>
+            <th>Name</th>
+            <th>Opening Balance</th>
+            <th>Current Balance</th>
+          </tr>
+          <tr *ngFor='let account of accounts'>
+            <td>  {{account.accId}} </td>
+            <td> {{account.name}} </td>
+            <td> {{account.openingBal}} </td>
+            <td> {{account.currentBal}} </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
